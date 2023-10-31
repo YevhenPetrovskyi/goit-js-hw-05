@@ -1,6 +1,6 @@
 'use strict';
 
-const allUsers = [
+const allusers = [
   {
     name: 'Moore Hensley',
     gender: 'male',
@@ -48,6 +48,6 @@ const getTotalBalanceByGender = (users, gender) => {
   return totalBalance;
 };
 
-console.log(getTotalBalanceByGender(allUsers, 'male')); // 12053
+console.log(getTotalBalanceByGender(allusers, 'male')); // 12053
 
-console.log(getTotalBalanceByGender(allUsers, 'female')); // 8863
+console.log(getTotalBalanceByGender(allusers, 'female')); // 8863
