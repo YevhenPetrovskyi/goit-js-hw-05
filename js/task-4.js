@@ -1,5 +1,15 @@
 'use strict';
 
+const getTotalBalanceByGender = (users, gender) => {
+  let totalBalance = 0;
+  users.forEach(user => {
+    if (user.gender === gender) {
+      totalBalance += user.balance;
+    }
+  });
+  return totalBalance;
+};
+
 const allusers = [
   {
     name: 'Moore Hensley',
@@ -37,16 +47,6 @@ const allusers = [
     balance: 2764,
   },
 ];
-
-const getTotalBalanceByGender = (users, gender) => {
-  let totalBalance = 0;
-  users.forEach(user => {
-    if (user.gender === gender) {
-      totalBalance += user.balance;
-    }
-  });
-  return totalBalance;
-};
 
 console.log(getTotalBalanceByGender(allusers, 'male')); // 12053
 
