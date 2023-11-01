@@ -1,13 +1,11 @@
 'use strict';
 
 const getTotalBalanceByGender = (users, gender) => {
-  let totalBalance = 0;
-  users.forEach(user => {
-    if (user.gender === gender) {
-      totalBalance += user.balance;
-    }
-  });
-  return totalBalance;
+  return users
+    .filter(user => user.gender === gender)
+    .reduce((totalBalance, user) => {
+      return totalBalance + user.balance;
+    }, 0);
 };
 
 const allusers = [
